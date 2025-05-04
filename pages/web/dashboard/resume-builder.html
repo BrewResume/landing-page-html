@@ -3,11 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume Builder</title>
+    <meta name="description" content="Professional resume builder application">
+    <meta name="author" content="Resume Builder">
+    <title>Resume Builder | Create Professional Resumes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
+        /* CSS Variables for theming */
         :root {
             --primary: #64FFDA;
             --primary-dark: #4ED8BB;
+            --primary-light: rgba(100, 255, 218, 0.1);
             --secondary: #7F5AF0;
             --accent: #FF6B6B;
             --success: #64FFDA;
@@ -21,21 +28,50 @@
             --gray-300: #4A4C53;
             --gray-400: #94A1B2;
             --gray-500: #BEC2C8;
+            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.2s ease;
+            --border-radius-sm: 0.25rem;
+            --border-radius: 0.5rem;
+            --border-radius-lg: 0.75rem;
         }
 
+        /* Reset & Base Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
         }
 
         body {
+            font-family: var(--font-family);
             background-color: var(--dark);
             color: var(--light);
             min-height: 100vh;
             display: flex;
             overflow: hidden;
+            line-height: 1.6;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--primary-dark);
         }
 
         /* Sidebar */
@@ -96,9 +132,9 @@
             align-items: center;
             padding: 0.75rem 1rem;
             margin-bottom: 0.5rem;
-            border-radius: 0.5rem;
+            border-radius: var(--border-radius);
             cursor: pointer;
-            transition: background-color 0.2s ease;
+            transition: var(--transition);
         }
 
         .nav-item.active {
@@ -134,7 +170,7 @@
             display: flex;
             align-items: center;
             padding: 1rem;
-            border-radius: 0.5rem;
+            border-radius: var(--border-radius);
             background-color: var(--gray-100);
         }
 
@@ -171,6 +207,7 @@
             flex: 1;
             margin-left: 250px;
             min-height: 100vh;
+            width: calc(100% - 250px);
         }
 
         /* Form Section */
@@ -184,17 +221,25 @@
 
         .header {
             margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .header h1 {
+        .header-left h1 {
             font-size: 1.75rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
         }
 
-        .header p {
+        .header-left p {
             color: var(--gray);
             font-size: 0.9rem;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 0.75rem;
         }
 
         /* Form Styles */
@@ -224,12 +269,12 @@
         .form-control {
             width: 100%;
             padding: 0.75rem 1rem;
-            border-radius: 0.5rem;
+            border-radius: var(--border-radius);
             background-color: var(--gray-100);
             border: 1px solid var(--gray-300);
             color: var(--light);
             font-size: 0.9rem;
-            transition: border-color 0.2s ease;
+            transition: var(--transition);
         }
 
         .form-control:focus {
@@ -255,11 +300,11 @@
         /* Buttons */
         .btn {
             padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
+            border-radius: var(--border-radius);
             font-size: 0.9rem;
             font-weight: 500;
             cursor: pointer;
-            transition: all 0.2s ease;
+            transition: var(--transition);
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -298,7 +343,7 @@
         .section-item {
             background-color: var(--gray-200);
             padding: 1.5rem;
-            border-radius: 0.75rem;
+            border-radius: var(--border-radius-lg);
             margin-bottom: 1.5rem;
         }
 
@@ -324,13 +369,58 @@
             height: 100vh;
         }
 
+        .preview-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .preview-header h2 {
+            font-size: 1.25rem;
+            color: #333;
+        }
+
+        .preview-actions {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .template-selector {
+            display: flex;
+            margin-bottom: 1.5rem;
+            overflow-x: auto;
+            padding: 0.5rem;
+            gap: 1rem;
+        }
+
+        .template-option {
+            min-width: 120px;
+            height: 160px;
+            border-radius: var(--border-radius);
+            border: 2px solid transparent;
+            overflow: hidden;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .template-option.active {
+            border-color: var(--primary);
+        }
+
+        .template-option img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .resume-preview {
             max-width: 800px;
             margin: 0 auto;
             background-color: white;
             padding: 3rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
             color: #333;
         }
 
@@ -424,19 +514,12 @@
         }
 
         .skill-tag {
-            background-color: rgba(100, 255, 218, 0.1);
+            background-color: var(--primary-light);
             color: var(--primary);
             padding: 0.5rem 1rem;
-            border-radius: 0.25rem;
+            border-radius: var(--border-radius-sm);
             font-size: 0.85rem;
             font-weight: 500;
-        }
-
-        .preview-actions {
-            display: flex;
-            justify-content: flex-end;
-            gap: 1rem;
-            margin-top: 2rem;
         }
 
         /* Tabs */
@@ -444,6 +527,8 @@
             display: flex;
             border-bottom: 1px solid var(--gray-300);
             margin-bottom: 1.5rem;
+            overflow-x: auto;
+            white-space: nowrap;
         }
 
         .form-tab {
@@ -463,19 +548,321 @@
             display: block;
         }
 
-        #experienceForm, #educationForm, #skillsForm {
+        #experienceForm, #educationForm, #skillsForm, #customSectionForm {
             display: none;
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+            display: none;
+        }
+
+        .modal {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            width: 500px;
+            max-width: 90%;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-header h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .modal-close {
+            background: transparent;
+            border: none;
+            color: var(--gray);
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        .modal-body {
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-footer {
+            display: flex;
+            justify-content: flex-end;
+            gap: 0.75rem;
+        }
+
+        /* Export Options */
+        .export-options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .export-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            background-color: var(--gray-200);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .export-option:hover {
+            background-color: var(--gray-300);
+        }
+
+        .export-option svg {
+            width: 36px;
+            height: 36px;
+            margin-bottom: 1rem;
+            color: var(--gray-400);
+        }
+
+        .export-option h4 {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .export-option p {
+            font-size: 0.8rem;
+            color: var(--gray-400);
+            text-align: center;
+        }
+
+        /* Color Theme Chooser */
+        .color-themes {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .color-option {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            border: 2px solid transparent;
+        }
+
+        .color-option:hover {
+            transform: scale(1.1);
+        }
+
+        .color-option.active {
+            border-color: white;
+        }
+
+        .color-teal {
+            background-color: var(--primary);
+        }
+
+        .color-purple {
+            background-color: var(--secondary);
+        }
+
+        .color-red {
+            background-color: var(--accent);
+        }
+
+        .color-blue {
+            background-color: #2563EB;
+        }
+
+        .color-green {
+            background-color: #10B981;
+        }
+
+        /* Custom Sections */
+        .custom-section-list {
+            margin-bottom: 1.5rem;
+        }
+
+        .custom-section-item {
+            background-color: var(--gray-200);
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .custom-section-item h4 {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .custom-section-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: var(--border-radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--gray-300);
+            color: var(--gray);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-icon:hover {
+            background-color: var(--gray-400);
+            color: var(--light);
+        }
+
+        .btn-icon svg {
+            width: 16px;
+            height: 16px;
+            margin-right: 0;
+        }
+
+        /* Dropdown */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            min-width: 160px;
+            background-color: var(--gray-100);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            z-index: 1;
+        }
+
+        .dropdown-item {
+            padding: 0.75rem 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .dropdown-item:hover {
+            background-color: var(--gray-200);
+        }
+
+        .dropdown-item svg {
+            width: 16px;
+            height: 16px;
+            margin-right: 0.75rem;
+        }
+
+        .show {
+            display: block;
+        }
+
+        /* Template Styles */
+        .resume-preview.modern {
+            padding: 2rem;
+        }
+
+        .resume-preview.modern .resume-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .resume-preview.minimal {
+            padding: 2rem;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .resume-preview.minimal .resume-header {
+            border-bottom: none;
+        }
+
+        .resume-preview.minimal .resume-section h3 {
+            border-bottom: none;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .resume-preview.creative {
+            padding: 0;
+            display: grid;
+            grid-template-columns: 30% 70%;
+        }
+
+        .resume-preview.creative .resume-sidebar {
+            background-color: var(--gray-100);
+            padding: 2rem;
+            height: 100%;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 1200px) {
+            .resume-preview {
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .form-container, .preview-container {
+                width: 100%;
+                height: auto;
+                max-height: 50vh;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            
+            .main-content {
+                margin-left: 0;
+                width: 100%;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Sidebar -->
-    <div class="sidebar">
+    <aside class="sidebar">
         <div class="logo">
-            <img src="/api/placeholder/40/40" alt="Logo">
+            <img src="/api/placeholder/40/40" alt="Resume Builder Logo">
             <h1>ResumeBuilder</h1>
         </div>
-        <div class="nav-menu">
+        <nav class="nav-menu">
             <div class="nav-section">
                 <h2>Resume Sections</h2>
                 <div class="nav-item active" onclick="showTab('personalInfo')">
@@ -502,8 +889,30 @@
                     </svg>
                     <span>Skills</span>
                 </div>
+                <div class="nav-item" onclick="showTab('customSection')">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                    </svg>
+                    <span>Custom Sections</span>
+                </div>
             </div>
-        </div>
+            
+            <div class="nav-section">
+                <h2>Options</h2>
+                <div class="nav-item" onclick="openModal('templateModal')">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                    </svg>
+                    <span>Templates</span>
+                </div>
+                <div class="nav-item" onclick="openModal('exportModal')">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    <span>Export</span>
+                </div>
+            </div>
+        </nav>
         <div class="user-profile">
             <div class="avatar">JS</div>
             <div class="user-info">
@@ -511,27 +920,44 @@
                 <span class="plan">Pro Plan</span>
             </div>
         </div>
-    </div>
+    </aside>
 
     <!-- Main Content -->
-    <div class="main-content">
+    <main class="main-content">
         <!-- Form Section -->
-        <div class="form-container">
-            <div class="header">
-                <h1>Resume Builder</h1>
-                <p>Complete the form to build your professional resume</p>
-            </div>
+        <section class="form-container">
+            <header class="header">
+                <div class="header-left">
+                    <h1>Resume Builder</h1>
+                    <p>Complete the form to build your professional resume</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-outline" onclick="openModal('exportModal')" aria-label="Export Resume">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                        Export
+                    </button>
+                    <button class="btn btn-primary" onclick="downloadResume()" aria-label="Download Resume">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+                        </svg>
+                        Download
+                    </button>
+                </div>
+            </header>
 
             <!-- Form Tabs -->
-            <div class="form-tabs">
-                <div class="form-tab active" onclick="showTab('personalInfo')">Personal Info</div>
-                <div class="form-tab" onclick="showTab('experience')">Experience</div>
-                <div class="form-tab" onclick="showTab('education')">Education</div>
-                <div class="form-tab" onclick="showTab('skills')">Skills</div>
+            <div class="form-tabs" role="tablist">
+                <div class="form-tab active" onclick="showTab('personalInfo')" role="tab" aria-selected="true" aria-controls="personalInfoForm">Personal Info</div>
+                <div class="form-tab" onclick="showTab('experience')" role="tab" aria-selected="false" aria-controls="experienceForm">Experience</div>
+                <div class="form-tab" onclick="showTab('education')" role="tab" aria-selected="false" aria-controls="educationForm">Education</div>
+                <div class="form-tab" onclick="showTab('skills')" role="tab" aria-selected="false" aria-controls="skillsForm">Skills</div>
+                <div class="form-tab" onclick="showTab('customSection')" role="tab" aria-selected="false" aria-controls="customSectionForm">Custom Sections</div>
             </div>
 
             <!-- Personal Info Form -->
-            <div id="personalInfoForm" class="form-section">
+            <div id="personalInfoForm" class="form-section" role="tabpanel" aria-labelledby="personalInfo-tab">
                 <h2>Personal Information</h2>
                 
                 <div class="form-row">
@@ -559,7 +985,7 @@
                     
                     <div class="form-group">
                         <label for="phone">Phone</label>
-                        <input type="text" id="phone" class="form-control" value="(123) 456-7890" oninput="updatePreview()">
+                        <input type="tel" id="phone" class="form-control" value="(123) 456-7890" oninput="updatePreview()">
                     </div>
                 </div>
                 
@@ -575,7 +1001,7 @@
             </div>
 
             <!-- Experience Form -->
-            <div id="experienceForm" class="form-section">
+            <div id="experienceForm" class="form-section" role="tabpanel" aria-labelledby="experience-tab">
                 <h2>Work Experience</h2>
 
                 <div class="section-item">
@@ -639,7 +1065,7 @@
                         <textarea id="expDescription2" class="form-control" oninput="updatePreview()">Developed and maintained web applications for enterprise clients. Collaborated with UX designers to implement responsive interfaces. Optimized database queries improving application performance by 25%.</textarea>
                     </div>
                     
-                    <button class="btn btn-outline">
+                    <button class="btn btn-outline" type="button" aria-label="Remove Experience">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
                         </svg>
@@ -647,7 +1073,7 @@
                     </button>
                 </div>
 
-                <button class="btn btn-primary btn-full">
+                <button class="btn btn-primary btn-full" type="button" aria-label="Add Experience">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                     </svg>
@@ -656,7 +1082,7 @@
             </div>
 
             <!-- Education Form -->
-            <div id="educationForm" class="form-section">
+            <div id="educationForm" class="form-section" role="tabpanel" aria-labelledby="education-tab">
                 <h2>Education</h2>
 
                 <div class="section-item">
@@ -720,7 +1146,7 @@
                         <textarea id="eduDescription2" class="form-control" oninput="updatePreview()">Dean's List, Computer Science Club President</textarea>
                     </div>
                     
-                    <button class="btn btn-outline">
+                    <button class="btn btn-outline" type="button" aria-label="Remove Education">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
                         </svg>
@@ -728,7 +1154,7 @@
                     </button>
                 </div>
 
-                <button class="btn btn-primary btn-full">
+                <button class="btn btn-primary btn-full" type="button" aria-label="Add Education">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                     </svg>
@@ -737,7 +1163,7 @@
             </div>
 
             <!-- Skills Form -->
-            <div id="skillsForm" class="form-section">
+            <div id="skillsForm" class="form-section" role="tabpanel" aria-labelledby="skills-tab">
                 <h2>Skills</h2>
                 
                 <div class="form-group">
@@ -752,17 +1178,239 @@
                     </div>
                 </div>
             </div>
-        </div>
+
+            <!-- Custom Section Form -->
+            <div id="customSectionForm" class="form-section" role="tabpanel" aria-labelledby="customSection-tab">
+                <h2>Custom Sections</h2>
+                <p style="margin-bottom: 1.5rem;">Add custom sections to your resume to highlight additional qualifications or achievements.</p>
+                
+                <div class="custom-section-list">
+                    <div class="custom-section-item">
+                        <h4>Projects</h4>
+                        <div class="custom-section-actions">
+                            <button class="btn-icon" onclick="editCustomSection('Projects')" aria-label="Edit Projects Section">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                                </svg>
+                            </button>
+                            <button class="btn-icon" aria-label="Delete Projects Section">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="custom-section-item">
+                        <h4>Certifications</h4>
+                        <div class="custom-section-actions">
+                            <button class="btn-icon" onclick="editCustomSection('Certifications')" aria-label="Edit Certifications Section">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                                </svg>
+                            </button>
+                            <button class="btn-icon" aria-label="Delete Certifications Section">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn btn-primary btn-full" onclick="openModal('newSectionModal')" type="button" aria-label="Add Custom Section">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                    </svg>
+                    Add Custom Section
+                </button>
+            </div>
+        </section>
 
         <!-- Preview Section -->
-        <div class="preview-container">
-            <div class="resume-preview">
+        <section class="preview-container">
+            <header class="preview-header">
+                <h2>Resume Preview</h2>
+                <div class="preview-actions">
+                    <button class="btn btn-dark" onclick="openModal('templateModal')" aria-label="Choose Template">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                        </svg>
+                        Templates
+                    </button>
+                    <button class="btn btn-primary" onclick="downloadResume()" aria-label="Download Resume">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+                        </svg>
+                        Download
+                    </button>
+                </div>
+            </header>
+            
+            <article class="resume-preview">
                 <!-- Header -->
-                <div class="resume-header">
+                <header class="resume-header">
                     <h1 id="previewName">John Smith</h1>
                     <h2 id="previewJobTitle">Software Engineer</h2>
                     
                     <div class="contact-info">
                         <div class="contact-item">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <span id="previewEmail">john.smith@example.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <span id="previewPhone">(123) 456-7890</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span id="previewLocation">San Francisco, CA</span>
+                        </div>
+                    </div>
+                </header>
+                
+                <!-- Summary -->
+                <section class="resume-section">
+                    <h3>Summary</h3>
+                    <p id="previewSummary">Experienced software engineer with 5+ years of expertise in full-stack development. Passionate about creating efficient, scalable solutions and collaborating in cross-functional teams.</p>
+                </section>
+                
+                <!-- Experience -->
+                <section class="resume-section">
+                    <h3>Experience</h3>
+                    
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-title" id="previewPosition1">Senior Software Engineer</div>
+                                <div class="experience-company" id="previewCompany1">Tech Solutions Inc.</div>
+                            </div>
+                            <div class="experience-date" id="previewExpDate1">Jan 2021 - Present</div>
+                        </div>
+                        <div class="experience-description" id="previewExpDescription1">
+                            Led a team of 5 developers building a cloud-based SaaS platform. Implemented CI/CD pipelines reducing deployment time by 40%. Architected microservices infrastructure using Node.js and React.
+                        </div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-title" id="previewPosition2">Software Developer</div>
+                                <div class="experience-company" id="previewCompany2">Digital Innovations</div>
+                            </div>
+                            <div class="experience-date" id="previewExpDate2">Mar 2018 - Dec 2020</div>
+                        </div>
+                        <div class="experience-description" id="previewExpDescription2">
+                            Developed and maintained web applications for enterprise clients. Collaborated with UX designers to implement responsive interfaces. Optimized database queries improving application performance by 25%.
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Education -->
+                <section class="resume-section">
+                    <h3>Education</h3>
+                    
+                    <div class="education-item">
+                        <div class="education-header">
+                            <div>
+                                <div class="education-degree" id="previewDegree1">Master of Computer Science</div>
+                                <div class="education-institution" id="previewInstitution1">University of Technology</div>
+                            </div>
+                            <div class="education-date" id="previewEduDate1">Sep 2016 - May 2018</div>
+                        </div>
+                        <div class="education-description" id="previewEduDescription1">
+                            Specialized in Artificial Intelligence and Machine Learning. GPA: 3.8/4.0
+                        </div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="education-header">
+                            <div>
+                                <div class="education-degree" id="previewDegree2">Bachelor of Science in Computer Science</div>
+                                <div class="education-institution" id="previewInstitution2">State College</div>
+                            </div>
+                            <div class="education-date" id="previewEduDate2">Sep 2012 - May 2016</div>
+                        </div>
+                        <div class="education-description" id="previewEduDescription2">
+                            Dean's List, Computer Science Club President
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Skills -->
+                <section class="resume-section">
+                    <h3>Skills</h3>
+                    <div class="skills-list" id="previewSkills">
+                        <div class="skill-tag">JavaScript</div>
+                        <div class="skill-tag">React</div>
+                        <div class="skill-tag">Node.js</div>
+                        <div class="skill-tag">Python</div>
+                        <div class="skill-tag">SQL</div>
+                        <div class="skill-tag">AWS</div>
+                        <div class="skill-tag">Docker</div>
+                        <div class="skill-tag">Git</div>
+                        <div class="skill-tag">Agile</div>
+                        <div class="skill-tag">CI/CD</div>
+                    </div>
+                </section>
+                
+                <!-- Custom Sections (will be populated dynamically) -->
+                <section class="resume-section" id="projectsSection">
+                    <h3>Projects</h3>
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-title">Personal Portfolio Website</div>
+                            </div>
+                            <div class="experience-date">2022</div>
+                        </div>
+                        <div class="experience-description">
+                            Built a responsive portfolio website using React, Next.js, and Tailwind CSS. Implemented dark/light mode toggle and contact form functionality.
+                        </div>
+                    </div>
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-title">Task Management App</div>
+                            </div>
+                            <div class="experience-date">2021</div>
+                        </div>
+                        <div class="experience-description">
+                            Developed a full-stack task management application with React, Node.js, and MongoDB. Implemented user authentication, task CRUD operations, and drag-and-drop functionality.
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="resume-section" id="certificationsSection">
+                    <h3>Certifications</h3>
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-title">AWS Certified Solutions Architect</div>
+                                <div class="experience-company">Amazon Web Services</div>
+                            </div>
+                            <div class="experience-date">2023</div>
+                        </div>
+                    </div>
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-title">Certified Scrum Master</div>
+                                <div class="experience-company">Scrum Alliance</div>
+                            </div>
+                            <div class="experience-date">2022</div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
