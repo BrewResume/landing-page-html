@@ -132,14 +132,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     // Redirect to sign in page after registration
                     setTimeout(() => {
-                        window.location.href = 'signin.html';
+                        window.location.href = 'login.html';
                     }, 1500);
                 } else {
                     submitButton.appendChild(document.createTextNode('Signed In'));
                     
                     // Redirect to dashboard after login
                     setTimeout(() => {
-                        window.location.href = 'dashboard.html';
+                        window.location.href = '../dashboard/dashboard.html';
                     }, 1500);
                 }
             }, 2000);

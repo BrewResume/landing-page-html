@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Templates - ResumeBuilder</title>
+    <link rel="stylesheet" href="../../../assets/css/resume-templates.css">
+    <script src="../../../assets/js/resume-templates.js" defer></script>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="/api/placeholder/40/40" alt="Logo">
+            <h1>ResumeBuilder</h1>
+        </div>
+        <div class="nav-menu">
+            <div class="nav-section">
+                <h2>Create Resume</h2>
+                <div class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                    </svg>
+                    <a href="./resume-builder/resume-builder.html">
+                        <span>Create New</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    <span>My Documents</span>
+                </div>
+            </div>
+
+            <div class="nav-section">
+                <h2>Resume Tools</h2>
+                <div class="nav-item active">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                    </svg>
+                    <span>Templates</span>
+                </div>
+                <div class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                    <span>Resume Tips</span>
+                </div>
+                <div class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                    </svg>
+                    <span>Resume Checker</span>
+                </div>
+            </div>
+
+            <div class="nav-section">
+                <h2>Account</h2>
+                <div class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <span>Settings</span>
+                </div>
+                <div class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" />
+                    </svg>
+                    <span>Premium</span>
+                </div>
+            </div>
+        </div>
+        <div class="user-profile">
+            <div class="avatar">JS</div>
+            <div class="user-info">
+                <span class="name">John Smith</span>
+                <span class="plan">Pro Plan</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">
+            <div class="header-left">
+                <h1>Resume Templates</h1>
+                <p>Choose from 32 professionally designed templates</p>
+            </div>
+        </div>
+
+        <!-- Search and Filters -->
+        <div class="search-filters">
+            <div class="search-box">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <input type="text" placeholder="Search templates...">
+            </div>
+            <div class="filters">
+                <div class="filter-dropdown">
+                    <button class="filter-btn">
+                        Industry
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="filter-dropdown">
+                    <button class="filter-btn">
+                        Experience Level
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="filter-dropdown">
+                    <button class="filter-btn">
+                        Style
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Template Tabs -->
+        <div class="template-tabs">
+            <div class="template-tab active">All Templates <span class="count">32</span></div>
+            <div class="template-tab">Professional <span class="count">12</span></div>
+            <div class="template-tab">Modern <span class="count">10</span></div>
+            <div class="template-tab">Creative <span class="count">6</span></div>
+            <div class="template-tab">Simple <span class="count">4</span></div>
+        </div>
+
+        <!-- Templates Grid -->
+        <div class="templates-grid">
+            <!-- Template Card 1 -->
+            <div class="template-card">
+                <div class="featured-badge">Featured</div>
+                <div class="template-img">
+                    <img src="/api/placeholder/280/360" alt="Stockholm Template">
+                    <div class="template-overlay">
+                        <div class="template-actions">
+                            <button class="template-btn primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                </svg>
+                                Use Template
+                            </button>
+                            <button class="template-btn secondary">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                </svg>
+                                Preview
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="template-info">
+                    <div class="template-name">Stockholm</div>
+                    <div class="template-description">Clean and professional template ideal for corporate roles</div>
+                    <div class="template-colors">
+                        <div class="color-option color-teal"></div>
+                        <div class="color-option color-blue"></div>
+                        <div class="color-option color-purple"></div>
+                        <div class="color-option color-green"></div>
+                    </div>
+                    <div class="template-meta">
+                        <div class="template-tags">
+                            <div class="template-tag">Professional</div>
+                            <div class="template-tag">Modern</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Template Card 2 -->
+            <div class="template-card">
+                <div class="template-img">
+                    <img src="/api/placeholder/280/360" alt="Berlin Template">
+                    <div class="template-overlay">
+                        <div class="template-actions">
+                            <button class="template-btn primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                </svg>
+                                Use Template
+                            </button>
+                            <button class="template-btn secondary">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                </svg>
+                                Preview
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="template-info">
+                    <div class="template-name">Berlin</div>
+                    <div class="template-description">Bold, modern design with standout section headers</div>
+                    <div class="template-colors">
+                        <div class="color-option color-blue"></div>
+                        <div class="color-option color-teal"></div>
+                        <div class="color-option color-red"></div>
+                        <div class="color-option color-purple"></div>
+                    </div>
+                    <div class="template-meta">
+                        <div class="template-tags">
+                            <div class="template-tag">Creative</div>
+                            <div class="template-tag">Modern</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Template Card 3 -->
+            <div class="template-card">
+                <div class="pro-badge">PRO</div>
+                <div class="template-img">
+                    <img src="/api/placeholder/280/360" alt="Tokyo Template">
+                    <div class="template-overlay">
+                        <div class="template-actions">
+                            <button class="template-btn primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                </svg>
+                                Use Template
+                            </button>
+                            <button class="template-btn secondary">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                </svg>
+                                Preview
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="template-info">
+                    <div class="template-name">Tokyo</div>
+                    <div class="template-description">Minimal and elegant with a subtle sidebar accent</div>
+                    <div class="template-colors">
+                        <div class="color-option color-purple"></div>
+                        <div class="color-option color-blue"></div>
+                        <div class="color-option color-teal"></div>
+                        <div class="color-option color-green"></div>
+                    </div>
+                    <div class="template-meta">
+                        <div class="template-tags">
+                            <div class="template-tag">Minimal</div>
+                            <div class="template-tag">Elegant</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Template Card 4 -->
+            <div class="template-card">
+                <div class="template-img">
+                    <img src="/api/placeholder/280/360" alt="Madrid Template">
+                    <div class="template-overlay">
+                        <div class="template-actions">
+                            <button class="template-btn primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                </svg>
+                                Use Template
+                            </button>
+                            <button class="template-btn secondary">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                </svg>
+                                Preview
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="template-info">
+                    <div class="template-name">Madrid</div>
+                    <div class="template-description">Traditional layout with a modern twist, perfect for any field</div>
+                    <div class="template-colors">
+                        <div class="color-option color-green"></div>
+                        <div class="color-option color-blue"></div>
+                        <div class="color-option color-teal"></div>
+                        <div class="color-option color-red"></div>
+                    </div>
+                    <div class="template-meta">
+                        <div class="template-tags">
+                            <div class="template-tag">Professional</div>
+                            <div class="template-tag">Classic</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Template Card 5 -->
+            <div class="template-card">
+                <div class="pro-badge">PRO</div>
+                <div class="template-img">
+                    <img src="/api/placeholder/280/360" alt="Sydney Template">
+                    <div class="template-overlay">
+                        <div class="template-actions">
+                            <button class="template-btn primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                </svg>
+                                Use Template
+                            </button>
+                            <button class="template-btn secondary">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                </svg>
+                                Preview
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="template-info">
+                    <div class="template-name">Sydney</div>
+                    <div class="template-description">Creative and unique two-column layout with stylish accents</div>
+                    <div class="template-colors">
+                        <div class="color-option color-red"></div>
+                        <div class="color-option color-purple"></div>
+                        <div class="color-option color-blue"></div>
+                        <div class="color-option color-teal"></div>
+                    </div>
+                    <div class="template-meta">
+                        <div class="template-tags">
+                            <div class="template-tag">Creative</div>
+                            <div class="template-tag">Bold</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Template Card 6 -->
+            <div class="template-card">
+                <div class="featured-badge">Featured</div>
+                <div class="template-img">
+                    <img src="/api/placeholder/280/360" alt="Paris Template">
+                    <div class="template-overlay">
+                        <div class="template-actions">
+                            <button class="template-btn primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                </svg>
+                                Use Template
+                            </button>
+                            <button class="template-btn secondary">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                </svg>
+                                Preview
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="template-info">
+                    <div class="template-name">Paris</div>
+                    <div class="template-description">Elegant template with sophisticated typography</div>
+                    <div class="template-colors">
+                        <div class="color-option color-teal"></div>
+                        <div class="color-option color-blue"></div>
+                        <div class="color-option color-purple"></div>
+                        <div class="color-option color-green"></div>
+                    </div>
+                    <div class="template-meta">
+                        <div class="template-tags">
+                            <div class="template-tag">Elegant</div>
+                            <div class="template-tag">Executive</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Template Card 7 -->
+            <div class="template-card">
+                <div class="template-img">
+                    <img src="/api/placeholder/280/360" alt="New York Template">
+                    <div class="template-overlay">
+                        <div class="template-actions">
+                            <button class="template-btn primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                </svg>
+                                Use Template
+                            </button>
+                            <button class="template-btn secondary">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                </svg>
+                                Preview
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="template-info">
+                    <div class="template-name">New York</div>
+                    <div class="template-description">Bold and confident design for high-impact professionals</div>
+                    <div class="template-colors">
+                        <div class="color-option color-blue"></div>
+                        <div class="color-option color-teal"></div>
+                        <div class="color-option color-red"></div>
+                        <div class="color-option color-purple"></div>
+                    </div>
+                    <div class="template-meta">
+                        <div class="template-tags">
+                            <div class="template-tag">Bold</div>
+                            <div class="template-tag">Modern</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Template Card 8 -->
+            <div class="template-card">
+                <div class="pro-badge">PRO</div>
+                <div class="template-img">
+                    <img src="/api/placeholder/280/360" alt="Oslo Template">
+                    <div class="template-overlay">
+                        <div class="template-actions">
+                            <button class="template-btn primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                </svg>
+                                Use Template
+                            </button>
+                            <button class="template-btn secondary">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                </svg>
+                                Preview
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="template-info">
+                    <div class="template-name">Oslo</div>
+                    <div class="template-description">Minimalist design with focus on readability and content</div>
+                    <div class="template-colors">
+                        <div class="color-option color-green"></div>
+                        <div class="color-option color-blue"></div>
+                        <div class="color-option color-teal"></div>
+                        <div class="color-option color-purple"></div>
+                    </div>
+                    <div class="template-meta">
+                        <div class="template-tags">
+                            <div class="template-tag">Simple</div>
+                            <div class="template-tag">Clean</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="load-more">
+            <button class="load-more-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+                Load More Templates
+            </button>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <div class="page-item prev">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </div>
+            <div class="page-item active">1</div>
+            <div class="page-item">2</div>
+            <div class="page-item">3</div>
+            <div class="page-item">4</div>
+            <div class="page-item next">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- Footer CTA Section -->
+        <div class="templates-footer">
+            <h2 class="footer-title">Build Your Perfect Resume</h2>
+            <p class="footer-description">
+                Our professionally designed templates make it easy to create a standout resume that will catch the eye of hiring managers. With customizable colors, fonts, and layouts, you can personalize your resume to match your unique style and industry requirements.
+            </p>
+            <div class="footer-cta">
+                <div class="cta-text">
+                    <h3>Upgrade to Pro</h3>
+                    <p>Get access to all premium templates, unlimited downloads, and expert resume reviews.</p>
+                </div>
+                <button class="cta-btn">
+                    Unlock All Templates
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
