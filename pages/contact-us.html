@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | BrewResume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="../assets/css/contact-us.css">
+    <script src="../assets/js/contact-us.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">Brew<span>Resume</span></a>
+                
+                <div class="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="templates.html">Templates</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
+                    </ul>
+                    
+                    <div class="nav-cta">
+                        <a href="./pages/web/auth/login.html" class="btn btn-outline">Log In</a>
+                        <a href="./pages/web/auth/register.html" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+                
+                <div class="mobile-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title fade-in">Contact Us</h1>
+            <p class="page-subtitle fade-in">We're here to help you on your career journey. Reach out to our team with any questions, feedback, or support requests.</p>
+        </div>
+    </section>
+    
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <h2 class="contact-info-title">Get In Touch</h2>
+                    <p class="contact-info-text">Have questions about our services or need help with your resume? Our support team is ready to assist you. Reach out through any of these channels and we'll get back to you as soon as possible.</p>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3 class="contact-method-title">Email Us</h3>
+                            <p class="contact-method-content">
+                                <a href="mailto:support@BrewResume.com">support@BrewResume.com</a><br>
+                                <a href="mailto:careers@BrewResume.com">careers@BrewResume.com</a><br>
+                                <span class="response-time">We typically respond within 24 hours</span>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3 class="contact-method-title">Call Us</h3>
+                            <p class="contact-method-content">
+                                <a href="tel:+18005551234">+1 (800) 555-1234</a><br>
+                                Mon-Fri: 8:00 AM - 8:00 PM EST<br>
+                                Sat: 9:00 AM - 5:00 PM EST
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3 class="contact-method-title">Live Chat</h3>
+                            <p class="contact-method-content">
+                                Available on our website<br>
+                                Mon-Fri: 8:00 AM - 10:00 PM EST<br>
+                                <button id="startChat" class="btn btn-outline btn-sm" style="margin-top: 5px;">Start Chat</button>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3 class="contact-method-title">Visit Us</h3>
+                            <p class="contact-method-content">
+                                123 Career Avenue, Suite 500<br>
+                                New York, NY 10001<br>
+                                United States
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container fade-in">
+                    <h2 class="contact-form-title">Send Us a Message</h2>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" id="firstName" name="firstName" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" class="form-control" required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" id="email" name="email" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">Phone (Optional)</label>
+                                    <input type="tel" id="phone" name="phone" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <select id="subject" name="subject" class="form-control" required>
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="support">Technical Support</option>
+                                <option value="billing">Billing Question</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-control" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">
+                                <input type="checkbox" name="newsletter" id="newsletter"> Subscribe to our newsletter for career tips and updates
+                            </label>
+                        </div>
+                        
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn-submit">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="map-container fade-in">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343405!2d-73.9858544845937!3d40.74844097932764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ0JzU0LjQiTiA3M8KwNTknMDUuMCJX!5e0!3m2!1sen!2sus!4v1620292605987!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Office Locations -->
+    <section class="locations-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Our Offices</h2>
+            <p class="section-subtitle fade-in">Visit us at one of our global locations</p>
+            
+            <div class="locations-grid">
+                <div class="location-card fade-in">
+                    <div class="location-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="location-title">New York (Headquarters)</h3>
+                    <p class="location-address">
+                        123 Career Avenue, Suite 500<br>
+                        New York, NY 10001<br>
+                        United States
+                    </p>
+                    <p class="location-phone">
+                        <a href="tel:+18005551234">+1 (800) 555-1234</a>
+                    </p>
+                    <p class="location-email">
+                        <a href="mailto:nyc@BrewResume.com">nyc@BrewResume.com</a>
+                    </p>
+                </div>
+                
+                <div class="location-card fade-in">
+                    <div class="location-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="location-title">San Francisco</h3>
+                    <p class="location-address">
+                        456 Tech Boulevard<br>
+                        San Francisco, CA 94105<br>
+                        United States
+                    </p>
+                    <p class="location-phone">
+                        <a href="tel:+18005551235">+1 (800) 555-1235</a>
+                    </p>
+                    <p class="location-email">
+                        <a href="mailto:sf@BrewResume.com">sf@BrewResume.com</a>
+                    </p>
+                </div>
+                
+                <div class="location-card fade-in">
+                    <div class="location-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="location-title">London</h3>
+                    <p class="location-address">
+                        789 Career Lane<br>
+                        London, EC2A 4AP<br>
+                        United Kingdom
+                    </p>
+                    <p class="location-phone">
+                        <a href="tel:+442012345678">+44 (20) 1234-5678</a>
+                    </p>
+                    <p class="location-email">
+                        <a href="mailto:london@BrewResume.com">london@BrewResume.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Frequently Asked Questions</h2>
+            <p class="section-subtitle fade-in">Find quick answers to common questions about our services.</p>
+            
+            <div class="faq-grid">
+                <div class="faq-item fade-in">
+                    <h3 class="faq-question">How long does it take to get a response?</h3>
+                    <p class="faq-answer">We typically respond to all inquiries within 24 hours during business days. For urgent technical issues, our support team aims to respond within 4 hours.</p>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <h3 class="faq-question">Can I get a refund if I'm not satisfied?</h3>
+                    <p class="faq-answer">Yes, we offer a 30-day money-back guarantee on all our premium plans. If you're not completely satisfied, simply contact our support team for a full refund.</p>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <h3 class="faq-question">Do you offer personalized resume reviews?</h3>
+                    <p class="faq-answer">Yes! Our Premium and Enterprise plans include personalized resume reviews by our career experts. You can also purchase a one-time review service separately.</p>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <h3 class="faq-question">How can I cancel my subscription?</h3>
+                    <p class="faq-answer">You can cancel your subscription at any time from your account settings. We don't lock you into long-term contracts, and you can easily resume your subscription later if needed.</p>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <h3 class="faq-question">Are my resume and personal details secure?</h3>
+                    <p class="faq-answer">Absolutely. We use enterprise-grade encryption to protect your data. We never share your information with third parties, and you can request data deletion at any time.</p>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <h3 class="faq-question">Do you offer discounts for students?</h3>
+                    <p class="faq-answer">Yes, we offer a 50% discount for students with a valid .edu email address. Contact our support team with your student ID for verification.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-container fade-in">
+                <div class="newsletter-content">
+                    <h2 class="newsletter-title">Get Weekly Career Insights</h2>
+                    <p class="newsletter-description">Subscribe to our newsletter and receive:</p>
+                    <ul>
+                        <li>Curated job search strategies and resume tips</li>
+                        <li>Early access to new templates and tools</li>
+                        <li>Industry insights and salary data</li>
+                        <li>Exclusive webinar invitations</li>
+                    </ul>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Your email address">
+                        <button type="submit" class="newsletter-btn">Subscribe</button>
+                    </form>
+                </div>
+                <div class="newsletter-image">
+                    <img src="/api/placeholder/400/300" alt="Newsletter">
+                </div>
+            </div>
+        </div>
+        <div class="newsletter-decoration newsletter-decoration-1"></div>
+        <div class="newsletter-decoration newsletter-decoration-2"></div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">Brew<span>Resume</span></a>
+                    <p class="footer-description">Our mission is to empower professionals at every career stage with the tools they need to showcase their talents and achieve their career goals.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-heading">Product</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="#">Features</a></li>
+                        <li class="footer-link"><a href="#">Templates</a></li>
+                        <li class="footer-link"><a href="#">Pricing</a></li>
+                        <li class="footer-link"><a href="#">Testimonials</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-heading">Resources</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="#">Resume Guide</a></li>
+                        <li class="footer-link"><a href="#">Cover Letter Tips</a></li>
+                        <li class="footer-link"><a href="#">Career Blog</a></li>
+                        <li class="footer-link"><a href="#">Job Search Strategy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-heading">Company</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="#">About Us</a></li>
+                        <li class="footer-link"><a href="#">Careers</a></li>
+                        <li class="footer-link"><a href="#">Contact</a></li>
+                        <li class="footer-link"><a href="#">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-heading">Stay Updated</h3>
+                    <p class="footer-newsletter">Subscribe to our newsletter for career tips, résumé trends, and special offers.</p>
+                    <form class="footer-form">
+                        <input type="email" class="footer-input" placeholder="Your email address">
+                        <button type="submit" class="footer-btn"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 BrewResume. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#" class="footer-bottom-link">Privacy Policy</a>
+                    <a href="#" class="footer-bottom-link">Terms of Service</a>
+                    <a href="#" class="footer-bottom-link">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toast-message"></span>
+    </div>
+    
+</body>
+</html>

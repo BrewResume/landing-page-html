@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrewResume | Pricing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="../assets/css/pricing.css">
+    <script src="../assets/js/pricing.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">Brew<span>Resume</span></a>
+                
+                <div class="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="templates.html">Templates</a></li>
+                        <li><a href="pricing.html" class="active">Pricing</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                    </ul>
+                    
+                    <div class="nav-cta">
+                        <a href="./pages/web/auth/login.html" class="btn btn-outline">Log In</a>
+                        <a href="./pages/web/auth/register.html" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+                
+                <div class="mobile-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h1 class="hero-heading">Simple, Transparent <span class="text-gradient">Pricing</span></h1>
+                <p class="hero-subtitle">Choose the plan that's right for your career goals. No hidden fees, no complicated tiers—just straightforward value to help you land your dream job.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="pricing">
+        <div class="container">
+            <div class="pricing-toggle fade-in">
+                <span class="toggle-label active" id="monthlyLabel">Monthly</span>
+                <div class="toggle-switch" id="billingToggle"></div>
+                <span class="toggle-label" id="yearlyLabel">Yearly <span class="save-badge">Save 20%</span></span>
+            </div>
+            
+            <div class="pricing-grid fade-in">
+                <!-- Free Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Free</h3>
+                        <p class="pricing-description">Perfect for trying out our platform</p>
+                        <div class="pricing-price free-price">$0</div>
+                        <div class="pricing-period">Forever free</div>
+                        <div class="pricing-cta">
+                            <a href="./pages/web/auth/register.html" class="btn pricing-btn free-btn">Get Started</a>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span class="feature-text">Access to 5 basic templates</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span class="feature-text">Create 1 resume</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span class="feature-text">Basic PDF export</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span class="feature-text">Standard formatting options</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span class="feature-text">Community support</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Pro Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-popular">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Pro</h3>
+                        <p class="pricing-description">For serious job seekers and professionals</p>
+                        <div class="pricing-price pro-price" id="proPrice"><span class="pricing-currency">$</span>12</div>
+                        <div class="pricing-period" id="proPeriod">Per month</div>
+                        <div class="pricing-cta">
+                            <a href="./pages/web/auth/register.html?plan=pro" class="btn pricing-btn pro-btn">Get Pro</a>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span class="feature-text">Everything in Free, plus:</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span class="feature-text">Access to all 100+ templates</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span class="feature-text">Create unlimited resumes</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span class="feature-text">Advanced customization options</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span class="feature-text">Cover letter builder</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span class="feature-text">ATS keyword optimization</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span class="feature-text">Multiple export formats</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span class="feature-text">Priority email support</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Team Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Team</h3>
+                        <p class="pricing-description">For career coaches and organizations</p>
+                        <div class="pricing-price team-price" id="teamPrice"><span class="pricing-currency">$</span>49</div>
+                        <div class="pricing-period" id="teamPeriod">Per month</div>
+                        <div class="pricing-cta">
+                            <a href="./pages/web/auth/register.html?plan=team" class="btn pricing-btn team-btn">Contact Sales</a>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul class="feature-list team-feature">
+                            <li class="feature-item">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span class="feature-text">Everything in Pro, plus:</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span class="feature-text">Manage up to 25 users</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span class="feature-text">Team admin dashboard</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span class="feature-text">Template customization</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span class="feature-text">Brand customization</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span class="feature-text">Analytics & reporting</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span class="feature-text">API access</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span class="feature-text">Dedicated account manager</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Money-back guarantee -->
+            <div class="guarantee fade-in">
+                <div class="guarantee-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="guarantee-content">
+                    <h3>30-Day Money-Back Guarantee</h3>
+                    <p>Not satisfied with our service? Let us know within 30 days of your purchase and we'll refund your payment. No questions asked.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="features-comparison">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Detailed <span class="text-gradient">Feature Comparison</span></h2>
+                <p class="subtitle">Compare our plans in detail to find the perfect fit for your resume building needs.</p>
+            </div>
+            
+            <div class="fade-in">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Features</th>
+                            <th class="plan-header free-header">Free</th>
+                            <th class="plan-header pro-header">Pro</th>
+                            <th class="plan-header team-header">Team</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="4" class="comparison-category">BASICS</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="feature-name">Number of Resumes</div>
+                                <div class="feature-description">How many different resumes you can create</div>
+                            </td>
+                            <td class="feature-check">1</td>
+                            <td class="feature-check">Unlimited</td>
+                            <td class="feature-check">Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="feature-name">Templates</div>
+                                <div class="feature-description">Access to our professional template library</div>
+                            </td>
+                            <td class="feature-check">5 Basic</td>
+                            <td class="feature-check">100+</td>
+                            <td class="feature-check">100+ + Custom</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="feature-name">PDF Export</div>
+                                <div class="feature-description">Download your resume as a PDF</div>
+                            </td>
+                            <td class="feature-check">Basic</td>
+                            <td class="feature-check">Advanced</td>
+                            <td class="feature-check">Advanced</td>
+                        </tr>
+                        
+                        <tr>
+                            <td colspan="4" class="comparison-category">CONTENT & TOOLS</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="feature-name">Cover Letter Builder</div>
+                                <div class="feature-description">Create matching cover letters</div>
+                            </td>
+                            <td class="feature-dash">-</td>
+                            <td class="feature-check"><i class="fas fa-check"></i></td>
+                            <td class="feature-check"><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="feature-name">ATS Optimization</div>
+                                <div class="feature-description">Keyword suggestions to pass ATS systems</div>
+                            </td>
+                            <td class="feature-dash">-</td>
+                            <td class="feature-check"><i class="fas fa-check"></i></td>
+                            <td class="feature-check"><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="feature-name">Job Description Analyzer</div>
+                                <div class="feature-description">Match your resume to job descriptions</div>
+                            </td>
+                            <td class="feature-dash">-</td>
+                            <td class="feature-check"><i class="fas fa-check"></i></td>
+                            <td class="feature-check"><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="feature-name">Content Suggestions</div>
+                                <div class="feature-description">AI-powered content recommendations</div>
+                            </td>
+                            <td class="feature-dash">-</td>
+                            <td class="feature-check">Basic</td>
+                            <td class="feature-check">Advanced</td>
+                        </tr>
+                        
+                        <tr>
+                            <td colspan="4" class="comparison-category">FORMATTING & CUSTOMIZATION</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="feature-name">Custom Sections</div>
+                                <div class="feature-description">Create custom resume sections</div>
+                            </td>
+                            <td class="feature-dash">-</td>
+                            <td class="feature-check"><i class="fas fa-check"></i></td>
+                            <td class="feature-check"><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="feature-name">Font Library</div>
+                                <div class="feature-description">Access to premium fonts</div>
+                            </td>
+                            <td class="feature-check">Basic (5)</td>
+                            <td class="feature-check">Premium (50+)</td>
+                            <td class="feature-check">Premium (50+)</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="feature-name">Color Customization</div>
+                                <div class="feature-description">Change color schemes</div>
+                            </td>
+                            <td class="feature-check">Limited</td>
+                            <td class="feature-check">Full Palette</td>
+                            <td class="feature-check">Full Palette + Brand</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="feature-name">Layout Control</div>
+                                <div class="feature-description">Control over resume layout and spacing</div>
+                            </td>
+                            <td class="feature-dash">-</td>
+                            <td class="feature-check"><i class="fas fa-check"></i></td>
+                            <td class="feature-check"><i class="fas fa-check"></i></td>
+                        </tr>
+                        
+                        <tr>
+                            <td colspan="4" class="comparison-category">SUPPORT & EXTRAS</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="feature-name">Support</div>
+                                <div class="feature-description">Access to customer support</div>
+                            </td>
+                            <td class="feature-check">Community</td>
+                            <td class="feature-check">Priority Email</td>
+                            <td class="feature-check">Dedicated Manager</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="feature-name">Resume Hosting</div>
+                                <div class="feature-description">Get a shareable link to your resume</div>
+                            </td>
+                            <td class="feature-dash">-</td>
+                            <td class="feature-check"><i class="fas fa-check"></i></td>
+                            <td class="feature-check"><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="feature-name">Devices</div>
+                                <div class="feature-description">Access on multiple devices</div>
+                            </td>
+                            <td class="feature-check">1</td>
+                            <td class="feature-check">5</td>
+                            <td class="feature-check">Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="feature-name">API Access</div>
+                                <div class="feature-description">Integrate with your systems</div>
+                            </td>
+                            <td class="feature-dash">-</td>
+                            <td class="feature-dash">-</td>
+                            <td class="feature-check"><i class="fas fa-check"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    
+    <section class="faq">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Frequently Asked <span class="text-gradient">Questions</span></h2>
+                <p class="subtitle">Get answers to the most common questions about our pricing and features.</p>
+            </div>
+            
+            <div class="faq-grid fade-in">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What happens after my free trial ends?</span>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        After your 7-day free trial period ends, your account will automatically convert to a Free plan unless you choose to upgrade to Pro or Team. Any resumes you've created during the trial will remain accessible, but premium features will be limited until you upgrade.
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I cancel my subscription anytime?</span>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, you can cancel your subscription at any time from your account settings. If you cancel, you'll continue to have access to your paid plan until the end of your billing period. We don't offer prorated refunds for partial months, but we do have a 30-day money-back guarantee for new subscribers.
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What payment methods do you accept?</span>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        We accept all major credit cards including Visa, Mastercard, American Express, and Discover. We also accept PayPal and Apple Pay. For Team plans, we can also accommodate invoice payments and purchase orders.
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I switch plans after I subscribe?</span>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        Absolutely! You can upgrade or downgrade your plan at any time. When upgrading, the change takes effect immediately and we'll prorate the difference. When downgrading, the change will take effect at the end of your current billing cycle.
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is my resume data secure?</span>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, we take data security very seriously. All your data is encrypted both in transit and at rest. We follow industry-standard security practices and never share your information with third parties without your explicit consent. You can review our privacy policy for more details.
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 6 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you offer discounts for students?</span>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! We offer a 50% discount on Pro plans for verified students and recent graduates (within 6 months of graduation). To apply for the student discount, register with your academic email address or contact our support team with proof of enrollment.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="enterprise">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Need a <span class="text-gradient">Custom Solution?</span></h2>
+                <p class="subtitle">BrewResume Enterprise provides customized solutions for career services, recruiting firms, and large organizations.</p>
+            </div>
+            
+            <div class="enterprise-card fade-in">
+                <div class="enterprise-content">
+                    <h3 class="enterprise-title">BrewResume Enterprise</h3>
+                    <p class="enterprise-description">Our enterprise plan is perfect for universities, staffing agencies, career coaching firms, and HR departments that need a comprehensive resume solution for multiple users with advanced administrative controls.</p>
+                    
+                    <div class="enterprise-features">
+                        <div class="enterprise-feature">
+                            <span class="enterprise-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>Custom user roles and permissions</span>
+                        </div>
+                        <div class="enterprise-feature">
+                            <span class="enterprise-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>White-label solution with your branding</span>
+                        </div>
+                        <div class="enterprise-feature">
+                            <span class="enterprise-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>Custom templates specific to your organization</span>
+                        </div>
+                        <div class="enterprise-feature">
+                            <span class="enterprise-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>Advanced analytics and reporting tools</span>
+                        </div>
+                        <div class="enterprise-feature">
+                            <span class="enterprise-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>SSO and advanced security features</span>
+                        </div>
+                        <div class="enterprise-feature">
+                            <span class="enterprise-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>Dedicated customer success manager</span>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html" class="btn btn-secondary btn-lg">Contact Sales</a>
+                </div>
+                <div class="enterprise-image">
+                    <img src="/api/placeholder/500/400" alt="Enterprise dashboard">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content fade-in">
+                <h2>Ready to Build Your Professional Resume?</h2>
+                <p>Join thousands of job seekers who have successfully landed interviews with BrewResume templates.</p>
+                <a href="./pages/web/auth/register.html" class="btn cta-btn">Get Started Free</a>
+                
+                <div class="cta-decoration cta-decoration-1"></div>
+                <div class="cta-decoration cta-decoration-2"></div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">Brew<span>Resume</span></a>
+                    <p class="footer-description">Our mission is to empower professionals at every career stage with the tools they need to showcase their talents and achieve their career goals.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-heading">Product</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="#">Features</a></li>
+                        <li class="footer-link"><a href="#">Templates</a></li>
+                        <li class="footer-link"><a href="#">Pricing</a></li>
+                        <li class="footer-link"><a href="#">Testimonials</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-heading">Resources</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="#">Resume Guide</a></li>
+                        <li class="footer-link"><a href="#">Cover Letter Tips</a></li>
+                        <li class="footer-link"><a href="#">Career Blog</a></li>
+                        <li class="footer-link"><a href="#">Job Search Strategy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-heading">Company</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="#">About Us</a></li>
+                        <li class="footer-link"><a href="#">Careers</a></li>
+                        <li class="footer-link"><a href="#">Contact</a></li>
+                        <li class="footer-link"><a href="#">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-heading">Stay Updated</h3>
+                    <p class="footer-newsletter">Subscribe to our newsletter for career tips, résumé trends, and special offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Your email address">
+                        <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 BrewResume. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#" class="footer-bottom-link">Privacy Policy</a>
+                    <a href="#" class="footer-bottom-link">Terms of Service</a>
+                    <a href="#" class="footer-bottom-link">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
